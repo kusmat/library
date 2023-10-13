@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Books Library</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"> -->
+    <script src="script.js" defer></script>
+    
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="header">
+
+            <div class="header_left">
+                <img src="book-icon-vector.jpg" alt="Image of a book" width="200px">
+                <h1>MY BOOKS <br/> LIBRARY</h1>
+
+            </div>
+
+            <div class="header_right">
+                <div class="book_summary">
+                    <label for="">Number of books:</label><br/>
+                    <label for="">Number of books read:</label><br/>
+                    <label for="">Number of pages:</label><br/>
+                </div>
+                <div class="add_book">
+                    <button class="add_book_button" onclick="openForm()">+</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="book_card" id="pop_up_window">
+            <div class="book_details" id="pop_up_form" >
+                <form>
+
+                <button class="close" id ="close" onclick="close">&times;</button>
+
+                
+                <div class="pop_up_form_fields">
+
+                <div class='form-row'>
+                <label for="book_title_input">Title: 
+                <input type="text" name="book_title_input" id="title"></label>
+                </div>
+
+                <div class='form-row'>
+                <label for="book_author_input">Author:
+                <input type="text" name="book_author_input" id="author"></label>
+                </div>
+
+                <div class='form-row'>
+                <label for="book_title_input">No of pages: 
+                <input type="text" name="book_title_input" id="pages"></label>
+                </div>
+
+                <div class='form-row'>
+                <label for="read">Read: 
+                <input type="checkbox" name="read" id="read"></label>
+                </div>
+                </div>
+                <div class="pop_up_form_buttons">
+                <button id="close_window" class="pop_up_form_button" value="test">CLOSE</button>
+                <button id="add_book" class="pop_up_form_button" onclick="add_book">SAVE</button>
+                </div>
+                </form>
+                
+            </div>
+        </div>
+
+        <div class="main" id="main">
+  
+        </div>
+        
+    </div>
+</body>
+</html>
+
+
+<!-- Modal boxes - popup windows -->
+<!-- https://www.w3schools.com/howto/howto_css_modals.asp -->
+<!-- https://www.w3docs.com/tools/code-editor/12095 -->
+

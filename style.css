@@ -1,0 +1,280 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.wrapper{
+    padding: 20px;
+    max-width: 900px;
+    /* width: 900px; */
+}
+
+.header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.header_left{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: left;
+    align-items: center;
+    min-width: 450px;
+    max-width: 500px;
+}
+
+.header_right{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.book_summary{
+    display: grid;
+    align-items: center;
+    border-left: 3px bisque solid;
+    border-right: 3px bisque solid;
+    padding-left: 30px;
+    min-width: 300px;
+    
+}
+
+.main{
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.add_book{
+    display: grid;
+    padding: 30px;
+    /* border: 1px burlywood solid; */
+    
+}
+
+.add_book button{
+    
+    width: 65px;
+    height: 65px;
+    border-radius: 50px;
+    border: none;
+    font-size: 2.5rem;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(74, 148, 209);
+    border: 0;
+}
+
+.add_book button:hover{
+
+    background-color: rgb(99, 158, 206);
+    cursor: pointer;
+    
+ 
+}
+
+.add_book button:active{
+
+    background-color: rgb(4, 75, 133);
+    
+ 
+}
+
+
+.book_card{
+    width: 250px;
+    height: 300px;
+    margin: 20px;
+    border: 5px solid rgb(250, 205, 151);
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: 1fr 10fr 2fr 2fr 1fr;
+    grid-template-columns: 1fr 4fr 4fr 1fr;
+}
+
+.book_details{
+    grid-area: 2/2/3/5;
+}
+
+.book_details > h4{
+    color: rgba(0, 0, 0, 0.553);
+}
+
+#hidden{
+    /* visibility: hidden; */
+    display: none;
+}
+
+.card_button{
+
+    background-color: white;
+    border: 3px solid rgb(238, 193, 138);
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.book_card button:nth-of-type(1){
+    grid-area: 4/2/5/3;
+    margin-right: 10px;
+}
+
+.book_card button:nth-of-type(2){
+    grid-area: 4/3/5/4;
+    margin-left: 10px;
+}
+
+.card_button:hover{
+
+    background-color: bisque;
+
+}
+    
+.card_button:active{
+
+    background-color: rgb(255, 255, 255);
+
+}
+
+#pop_up_window{
+
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 0;
+    overflow: auto; /* Enable scroll if needed */
+    width: 900px;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+}
+
+#pop_up_form{
+
+    margin: 50px auto auto 50px;
+    border-radius: 200px;
+    width: 400px;
+    
+}
+
+form {
+
+    display: flex;
+    flex-direction: column;    
+    height: 500px;
+    padding: 25px;
+    margin: 25px;
+    box-shadow: 0 2px 5px #f5f5f5;
+    background: #eee;
+
+    /* border: 1px solid saddlebrown; */
+  }
+
+  .form-row {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* border: 1px solid red; */
+  }
+
+  .form-row input[type='text'] {
+    background-color: #FFFFFF;
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+    width: 100%;
+    padding: 2px;
+    font-size: 14px;
+  }
+  
+  .form-row label {
+    margin-bottom: 15px;
+
+  }
+
+  .pop_up_form_buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* border: 1px solid blue; */
+    /* font-size: 2rem; */
+  }
+
+  .pop_up_form_button{
+
+    /* border-style: none; */
+    background-color: white;
+    border: 1px solid salmon;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+
+  }
+
+  .pop_up_form_button:hover{
+
+    background-color: rgba(158, 95, 50, 0.658);
+
+  }
+
+
+  .pop_up_form_button:active{
+
+    background-color: rgb(158, 95, 50);
+
+  }
+
+  .close{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    
+    color: #aaa;
+    float: right;
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+    background-color: #eee;
+    /* border: 1px dotted orange; */
+    
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: none;
+  }
+
+
+  @media screen and (max-width: 480px) {
+    .header{
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+    .main{
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    #pop_up_form{
+
+        margin: 50px auto auto 0px;
+        border-radius: 200px;
+        width: 50%;
+        
+    }
+  }
+  
