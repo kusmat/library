@@ -1,4 +1,4 @@
-# library
+# Library
 Library as part of The Odin Project completion
 
 Live link:
